@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './tflite_model.dart';
+import './homescreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,8 +15,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Modern Pathologist',
-      theme: ThemeData.dark(),
-      home: TfliteModel(),
+      home: HomePage(),
+      theme: ThemeData.light().copyWith(
+          primaryColor: const Color(0xFF37474f),
+          appBarTheme: const AppBarTheme(backgroundColor: Color(0xFF37474f)),
+          accentColor: const Color(0xFF0d47a1)),
       debugShowCheckedModeBanner: false,
     );
   }
